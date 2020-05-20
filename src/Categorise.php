@@ -24,5 +24,5 @@ trait Categorise
      *
      * if there is only one category, and it is empty, then it will act as Nova does by default.
      */
-    public static $category;
+    public static $category = 'Other';
 }

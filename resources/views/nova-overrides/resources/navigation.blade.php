@@ -11,13 +11,13 @@
 
     <grouped-resource-collapsable header="{{ $group }}" :last="@json($loop->last)">
         @foreach ($resouces as $key => $resource)
-            <li class="leading-wide mb-4 text-sm" key="{{ $key }}">
+            <li class="leading-wide ml-8 mb-4 text-sm" key="{{ $key }}">
                 <router-link :to="{
                     name: 'index',
                     params: {
                         resourceName: '{{ $resource::uriKey() }}'
                     }
-                }" class="text-white ml-8 no-underline dim">
+                }" class="text-white no-underline dim">
                     {{ $resource::label() }}
                 </router-link>
             </li>

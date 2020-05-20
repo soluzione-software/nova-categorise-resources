@@ -16,7 +16,7 @@ class NovaCategorise extends Nova
             return $resource::$displayInNavigation;
         })->groupBy(function ($resource) {
             if (property_exists($resource, 'category')) {
-                return __(ucwords($resource::$category));
+                return ucwords(__($resource::$category));
             }
 
             return __('Other');
